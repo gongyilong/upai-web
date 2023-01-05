@@ -3,9 +3,10 @@
 ## 目录
 1. [简单介绍 Introduction](#简单介绍)
 2. [开发环境 Environment](#开发环境)
-3. [技术架构 Technology](#技术架构)
-4. [实现效果 Effect](#实现效果)
-5. [参考资料 Reference](#参考资料)
+3. [运行命令 Command](#运行命令)
+4. [技术架构 Technology](#技术架构)
+5. [实现效果 Effect](#实现效果)
+6. [参考资料 Reference](#参考资料)
 
 ## 简单介绍
 当下很多实际项目，动不动就上AI（领导想要亮点）。
@@ -17,7 +18,14 @@
 因此，这边就学了下百度、腾讯的AI平台，搭建个网页，缝合下算法，可视化展示下效果。
 
 ## 开发环境
-开发环境
+Angular CLI: 15.0.4
+ng-zorro-antd: 9.3.0
+node: 16.17.0
+npm: 9.2.0
+
+## 运行命令
+npm install
+npm run start
 
 ## 技术架构
 技术架构
