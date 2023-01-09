@@ -1,0 +1,57 @@
+<nz-layout>
+    <!-- 侧边栏 -->
+    <nz-sider [nzCollapsedWidth]="48" [nzWidth]="160" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="logo">
+            <a>
+                <img src="../../../../assets/layout/home/logo.png" alt="logo">
+                <h1 *ngIf="!isCollapsed">AI算法平台</h1>
+            </a>
+        </div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-submenu nzTitle="AI 算法" nzIcon="dashboard">
+                <ul>
+                    <li nz-menu-item routerLink="ai/application">应用场景</li>
+                    <li nz-menu-item routerLink="ai/workplace">工作台</li>
+                    <li nz-menu-item routerLink="ai/document">接口文档</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="设备管理" nzIcon="camera">
+                <ul>
+                    <li nz-menu-item routerLink="devices/camera">摄像头</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="数据管理" nzIcon="table">
+                <ul>
+                    <li nz-menu-item routerLink="data/dataset">数据集</li>
+                    <li nz-menu-item routerLink="data/tool">标注工具</li>
+                    <li nz-menu-item routerLink="data/crowd-sourcing">众包平台</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="用户管理" nzIcon="team">
+                <ul>
+                    <li nz-menu-item routerLink="users/info">群组管理</li>
+                    <li nz-menu-item routerLink="users/permissions">权限分配</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="个人中心" nzIcon="user">
+                <ul>
+                    <li nz-menu-item routerLink="personal/info">个人信息</li>
+                    <li nz-menu-item routerLink="personal/setting">设置</li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <!-- 内容 -->
+    <nz-layout class="right-layout">
+        <nz-layout class="head-layout">
+            <nz-header>
+                <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></span>
+                <app-head-user class="nav1"></app-head-user>
+            </nz-header>
+        </nz-layout>
+        <nz-content>
+            <router-outlet></router-outlet>
+        </nz-content>
+        <nz-footer>CopyRight © 2021 珠海市规划设计研究院. All Rights Reserved.</nz-footer>
+    </nz-layout>
+</nz-layout>

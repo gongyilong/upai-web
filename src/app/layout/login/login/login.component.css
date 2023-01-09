@@ -1,0 +1,67 @@
+.container {
+    background-image: url(../../../../assets/layout/login/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 5vh;
+    height: 2.9vw;
+}
+
+@font-face {
+    font-family: system-title;
+    src: url('../../../../assets/font/华康新综艺W7.TTF');
+}
+
+.title h1 {
+    background-image: linear-gradient(to bottom, #E8FAFF, #43C0FF);
+    background-clip: text;
+    color: transparent;
+    font-size: 40px;
+    font-family: system-title;
+    letter-spacing: 4px;
+}
+
+.insert {
+    position: absolute;
+    width: 32.344vw;
+    height: 21.719vw;
+    left: 55.208vw;
+    top: 26.574vh;
+    background: url("../../../../assets/layout/login/passport.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+    position: relative;
+    margin-top: 48px;
+}
+
+.top {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    font-size: large;
+}
+
+.footer {
+    text-align: center;
+    vertical-align: middle;
+    bottom: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer span {
+    color: white;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,96 @@
+<div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box">
+            <nz-card class="info">
+                <nz-tabset [nzTabPosition]="'left'">
+                    <nz-tab nzTitle="基本设置">
+                        <h2>基本设置</h2>
+                        <div nz-row>
+                            <div nz-col nzSpan="12">
+                                <p>邮箱：</p>
+                                <input class="setting-input" nz-input placeholder="gongyilong@zhghy.com" /><br><br>
+                                <p>昵称：</p>
+                                <input class="setting-input" nz-input placeholder="Dlog" /><br><br>
+                                <p>个人简介：</p>
+                                <textarea class="setting-input" rows="4" nz-input></textarea><br><br>
+                                <p>国家/地区：</p>
+                                <nz-select class="select-input" ngModel="lucy">
+                                    <nz-option nzValue="中国" nzLabel="中国"></nz-option>
+                                </nz-select><br><br>
+                                <p>所在省市：</p>
+                                <div>
+                                    <nz-select [(ngModel)]="selectedProvince" (ngModelChange)="provinceChange($event)">
+                                        <nz-option *ngFor="let p of provinceData" [nzValue]="p" [nzLabel]="p"></nz-option>
+                                    </nz-select>
+                                    <span>&nbsp;&nbsp;</span>
+                                    <nz-select [(ngModel)]="selectedCity">
+                                        <nz-option *ngFor="let c of cityData[selectedProvince]" [nzValue]="c" [nzLabel]="c"></nz-option>
+                                    </nz-select>
+                                </div><br>
+                                <p>街道地址：</p>
+                                <input class="setting-input" nz-input placeholder="西湖区工专路 77 号" /><br><br>
+                                <p>联系电话：</p>
+                                <nz-input-group>
+                                    <div nz-row [nzGutter]="8">
+                                        <div nz-col nzSpan="5">
+                                            <input type="text" nz-input [ngModel]="'0571'" />
+                                        </div>
+                                        <div nz-col nzSpan="8">
+                                            <input type="text" nz-input [ngModel]="'26888888'" />
+                                        </div>
+                                    </div>
+                                </nz-input-group><br>
+                                <button nz-button nzType="primary">更新基本信息</button>
+                            </div>
+                            <div nz-col nzSpan="12">
+                                <p>头像：</p>
+                                <div class="avatar">
+                                    <img src="https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png">
+                                </div><br>
+                                <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                                    <button nz-button><i nz-icon nzType="upload"></i>更换头像</button>
+                                </nz-upload>
+                            </div>
+                        </div>
+                    </nz-tab>
+                    <nz-tab nzTitle="安全设置">
+                        <h2>安全设置</h2>
+                        <nz-list nzItemLayout="horizontal" [nzLoading]="loading">
+                            <nz-list-item *ngFor="let item of data">
+                                <div>
+                                    <p>{{ item.title }}</p>
+                                    <p class="description">{{ item.description }}</p>
+                                </div>
+                                <a>{{ item.action }}</a>
+                            </nz-list-item>
+                        </nz-list>
+                    </nz-tab>
+                    <nz-tab nzTitle="账号绑定">
+                        <h2>账号绑定</h2>
+                        <nz-list nzItemLayout="horizontal" [nzLoading]="loading">
+                            <nz-list-item *ngFor="let item of data1">
+                                <div>
+                                    <p>{{ item.title }}</p>
+                                    <p class="description">{{ item.description }}</p>
+                                </div>
+                                <a>{{ item.action }}</a>
+                            </nz-list-item>
+                        </nz-list>
+                    </nz-tab>
+                    <nz-tab nzTitle="消息通知">
+                        <h2>消息通知</h2>
+                        <nz-list nzItemLayout="horizontal" [nzLoading]="loading">
+                            <nz-list-item *ngFor="let item of data2">
+                                <div>
+                                    <p>{{ item.title }}</p>
+                                    <p class="description">{{ item.description }}</p>
+                                </div>
+                                <nz-switch [ngModel]="true" nzCheckedChildren="开" nzUnCheckedChildren="关"></nz-switch>
+                            </nz-list-item>
+                        </nz-list>
+                    </nz-tab>
+                </nz-tabset>
+            </nz-card>
+        </div>
+    </div>
+</div>

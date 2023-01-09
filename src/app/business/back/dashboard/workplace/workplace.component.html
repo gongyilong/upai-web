@@ -1,0 +1,134 @@
+<div nz-row [nzGutter]="16">
+    <!-- 总销售额 -->
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <div class="ant-card-body">
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span style="color: gray;">总销售额</span>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <i nz-tooltip nzTooltipTitle="总销售额！" class="info" nz-icon nzType="info-circle" nzTheme="outline"></i>
+                    </div>
+                </div>
+                <h1>¥ 126,560</h1>
+                <h3>月销售额：¥ 6,560</h3>
+                <h3>周销售额：¥ 6,560</h3>
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span>月同比&nbsp;12%</span>
+                        <i style="color: red;" nz-icon nzType="caret-up" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <span>周同比&nbsp;11%</span>
+                        <i style="color: rgb(21, 226, 21);" nz-icon nzType="caret-down" nzTheme="outline"></i>
+                    </div>
+                </div>
+                <nz-divider></nz-divider>
+                <h4>日销售额&nbsp;￥3,600</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 访问量 -->
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <div class="ant-card-body">
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span style="color: gray;">总访问量</span>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <i nz-tooltip nzTooltipTitle="总访问量" class="info" nz-icon nzType="info-circle" nzTheme="outline"></i>
+                    </div>
+                </div>
+                <h2>8846</h2>
+                <div id="container1"></div>
+                <nz-divider></nz-divider>
+                <h4>日访问量&nbsp;1,001</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 支付笔数 -->
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <div class="ant-card-body">
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span style="color: gray;">支付笔数</span>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <i nz-tooltip nzTooltipTitle="再指！！！" class="info" nz-icon nzType="info-circle" nzTheme="outline"></i>
+                    </div>
+                </div>
+                <h2>6560</h2>
+                <div id="container2"></div>
+                <nz-divider></nz-divider>
+                <h4>转化率&nbsp;60%</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- 运营活动效果 -->
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <div class="ant-card-body">
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span style="color: gray;">运营活动效果</span>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <i nz-tooltip nzTooltipTitle="指！！！" class="info" nz-icon nzType="info-circle" nzTheme="outline"></i>
+                    </div>
+                </div>
+                <h2>78%</h2>
+                <div id="container3"></div>
+                <nz-divider></nz-divider>
+                <div nz-row nzJustify='space-between'>
+                    <div nz-col nzSpan="8">
+                        <span>周同比&nbsp;12%</span>
+                        <i style="color: red;" nz-icon nzType="caret-up" nzTheme="outline"></i>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <span>日同比&nbsp;11%</span>
+                        <i style="color: rgb(21, 226, 21);" nz-icon nzType="caret-down" nzTheme="outline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="prj" nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="18">
+        <div class="inner-box">
+            <nz-card nzTitle="进行中的项目" [nzExtra]="extraTemplate">
+                <div nz-card-grid class="card-content">金湾智慧水务项目</div>
+                <div nz-card-grid class="card-content">项目二</div>
+                <div nz-card-grid class="card-content">项目三</div>
+                <div nz-card-grid class="card-content">项目四</div>
+                <div nz-card-grid class="card-content">项目五</div>
+                <div nz-card-grid class="card-content">项目六</div>
+                <div nz-card-grid class="card-content">项目七</div>
+                <div nz-card-grid class="card-content">项目八</div>
+                <div nz-card-grid class="card-content">项目九</div>
+            </nz-card>
+            <ng-template #extraTemplate>
+                <a>全部项目</a>
+            </ng-template>
+            <div class="ant-card-body">
+                <div id="c4"></div>
+            </div>
+        </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <nz-card nzTitle="团队介绍">
+                <span><a> &nbsp;  &nbsp; 珠海市规划设计研究院</a>成立于1983年，具有城乡规划编制甲级、市政（道路、桥梁、隧道、给水、排水）设计甲级、建筑工程设计甲级、风景园林工程设计甲级、工程咨询甲级及交通、土地规划乙级、测绘地理信息乙级等资质，是珠海市资质最全、等级最高的综合性设计研究机构。
+                  <br>&nbsp;  &nbsp;在长期全方位参与城乡宏观政策研究、城市发展研究、城市规划与工程设计过程中，本院积累了丰富的项目经验，业务涵盖经济地理、城乡规划、城市设计、建筑设计、风景园林、环境保护、交通规划、市政工程、工程咨询等规划设计领域；建立了雄厚的专业人才储备，现有各类专业技术人员近500人，中级及以上职称占比60%，硕博占比41%。
+                  <br>&nbsp;  &nbsp;本院坚持“管理创新、质量兴业、科技强院”之路，先后通过了ISO9001质量管理体系认证和国家“高新技术企业”认证；一贯秉承“精心设计、优质高效、持续改进、顾客满意”的质量方针，充分发挥品牌优势、人才优势、信誉优势和综合优势，团结求实，开拓进取，努力打造成为“技术一流、质量一流、服务一流、信誉一流”的现代化设计研究院。</span>
+            </nz-card>
+        </div>
+    </div>
+</div>

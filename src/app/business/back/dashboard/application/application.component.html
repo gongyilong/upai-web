@@ -1,0 +1,13 @@
+<div id="application" nz-row [nzGutter]="[24,24]">
+    <div *ngFor="let item of applications" nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+            <div class="ant-card-body" routerLink="/back/detail/{{item.id}}">
+                <div class="des">
+                    <span>{{item.name}}</span>
+                    <span><i nz-icon nzType="eye" nzTheme="outline"></i> {{item.watch}}</span>
+                </div>
+                <img alt="water" src={{item.image_url}} />
+            </div>
+        </div>
+    </div>
+</div>

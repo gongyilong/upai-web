@@ -1,0 +1,40 @@
+<div class="passport">
+    <!-- 用户登录文本 -->
+    <div nz-row>
+        <div class="login-text">用户登录</div>
+    </div><br>
+    <!-- 用户名输入框 -->
+    <div nz-row>
+        <nz-input-group class="input" [nzPrefix]="prefixTemplateUser">
+            <input [type]="'text'" nz-input placeholder="请输入用户名" [(ngModel)]="username" />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser>
+            <span nz-icon nzType="user"></span>
+        </ng-template>
+    </div>
+    <!-- 密码输入框 -->
+    <div nz-row>
+        <nz-input-group class="input" [nzSuffix]="suffixTemplate" [nzPrefix]="prefixTemplateLock">
+            <input [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="请输入密码" [(ngModel)]="password" />
+        </nz-input-group>
+        <ng-template #prefixTemplateLock>
+            <span nz-icon nzType="lock"></span>
+        </ng-template>
+        <ng-template #suffixTemplate>
+            <span nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'" (click)="passwordVisible = !passwordVisible"></span>
+        </ng-template>
+    </div>
+    <!-- 记住密码 && 忘记密码 -->
+    <div class="forget" nz-row>
+        <div style="text-align: left;" nz-col [nzSpan]="12">
+            <label nz-checkbox><span>记住密码</span></label>
+        </div>
+        <div style="text-align: right;" nz-col [nzSpan]="12">
+            <a>忘记密码？</a>
+        </div>
+    </div>
+    <!-- 登录按钮 -->
+    <div nz-row>
+        <button (click)="login()" nz-button nzType="primary" nzBlock>登录</button>
+    </div>
+</div>

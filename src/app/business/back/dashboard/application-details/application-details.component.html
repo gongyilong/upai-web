@@ -1,0 +1,99 @@
+<!-- 功能介绍 -->
+<div class="detail" nz-row nzJustify="space-between">
+    <div nz-col [nzSpan]="1">
+        <a (click)="goBack()">
+            <返回</a>
+    </div>
+    <div nz-col [nzSpan]="6">
+        <img alt="water" src="{{application.image_url}}" />
+    </div>
+    <div nz-col [nzSpan]="16">
+        <h2>{{application.name}}</h2>
+        <nz-tag *ngFor="let item of tags" nzColor="processing">{{item}}</nz-tag><br>
+        <h4>算法简介：</h4>
+        <p>
+            {{application.description}}
+        </p>
+        <span>难度系数：</span>
+        <nz-rate [ngModel]="[application.difficulty]" nzDisabled></nz-rate>
+    </div>
+</div>
+
+<!-- 功能演示 -->
+<span class="title">功能演示</span>
+<div class="detection" nz-row nzJustify="space-between">
+    <div nz-col [nzSpan]="17">
+        <div class="input-image">
+            <img alt="water" [src]="previewImage" />
+        </div>
+        <div class="input">
+            <div class="input-container">
+                <input class="image-url" type="text" spellcheck="false" placeholder="请输入网络图片URL">
+                <button class="image-button">检测</button>
+                <nz-upload class="image-upload" [nzBeforeUpload]="beforeUpload">
+                    <span>本地上传</span>
+                </nz-upload>
+            </div>
+        </div>
+    </div>
+    <div nz-col [nzSpan]="6">
+        <div class="ai-result">
+            <nz-collapse class="ai-result-panels" nzAccordion>
+                <nz-collapse-panel [nzHeader]="'请求参数'" [nzActive]="'false'">
+                    <div class="demo-json-req">
+                        <div class="demo-json-line">
+                            Params:
+                        </div>
+                        <div class="demo-json-text">
+                            image="图片的Base64编码"
+                        </div>
+                        <div class="demo-json-line">
+                            Post:
+                        </div>
+                        <div class="demo-json-text">
+                            https://aip.baidubce.com/rest/2.0/image-classify/v1/plant?access_token="您的access_token"
+                        </div>
+                        <div class="demo-json-line">
+                            Header:
+                        </div>
+                        <div class="demo-json-text">
+                            Content-Type:application/x-www-form-urlencoded
+                        </div>
+                    </div>
+                </nz-collapse-panel>
+                <nz-collapse-panel [nzHeader]="'返回参数'" [nzActive]="'true'">
+                    <a>接口文档说明></a>
+                    <div class="demo-json-content">
+                        <span>{{ '{' }}</span><br>
+                        <span class="hljs-attr">&emsp;"img_id"</span>:
+                        <span class="hljs-string">"31476"</span>,<br>
+                        <span class="hljs-attr">&emsp;"result"</span>: [<br>
+                        <span>&emsp;{{ '{' }}</span><br>
+                        <span class="hljs-attr">&emsp;"obj_id"</span>:
+                        <span class="hljs-string">"31476_1"</span>,<br>
+                        <span class="hljs-attr">&emsp;"score"</span>:
+                        <span class="hljs-string">"0.8958"</span>,<br>
+                        <span class="hljs-attr">&emsp;"label"</span>:
+                        <span class="hljs-string">"water"</span>,<br>
+                        <span class="hljs-attr">&emsp;"bound"</span>:
+                        <span class="hljs-string">"[60,90,80,80]"</span>,<br>
+                        <span>&emsp;{{ '}' }}</span>,<br>
+                        <span>&emsp;{{ '{' }}</span><br>
+                        <span class="hljs-attr">&emsp;"obj_id"</span>:
+                        <span class="hljs-string">"31476_2"</span>,<br>
+                        <span class="hljs-attr">&emsp;"score"</span>:
+                        <span class="hljs-string">"0.9958"</span>,<br>
+                        <span class="hljs-attr">&emsp;"label"</span>:
+                        <span class="hljs-string">"water"</span>,<br>
+                        <span class="hljs-attr">&emsp;"bound"</span>:
+                        <span class="hljs-string">"[68,90,80,87]"</span>,<br>
+                        <span>&emsp;{{ '}' }}</span><br>
+                        <span>{{ '}' }}</span><br>
+                        <!-- <span class="hljs-string">{{panels}}</span>} -->
+                    </div>
+                </nz-collapse-panel>
+            </nz-collapse>
+        </div>
+
+    </div>
+</div>

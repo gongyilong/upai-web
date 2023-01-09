@@ -1,0 +1,168 @@
+.detail {
+    background-color: white;
+    width: 100%;
+    height: 30%;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.detail img {
+    border-radius: 1ch;
+    width: 100%;
+}
+
+.detail span,
+p {
+    color: gray;
+}
+
+.detail h4 {
+    color: gray;
+    margin-top: 0.8rem;
+}
+
+.back {
+    color: #2a76fa;
+}
+
+.detection {
+    width: 100%;
+    height: 55%;
+    padding: 1rem 1rem 1rem 6rem;
+}
+
+.detection img {
+    border-radius: 1ch;
+    width: 100%;
+}
+
+.title {
+    padding-left: 6rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+.input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    padding: 20px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 9;
+    background: rgba(0, 0, 0, .5);
+}
+
+.input-image {
+    width: 100%;
+    height: 600px;
+}
+
+.input-image img {
+    display: block;
+    width: 100%;
+    height: 575px;
+}
+
+.input-container {
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.image-url {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    height: 38px;
+    line-height: 36px;
+    color: #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    outline: none;
+    background-color: rgba(0, 0, 0, .45);
+}
+
+.image-button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12%;
+    height: 38px;
+    line-height: 36px;
+    color: #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    outline: none;
+    background-color: rgba(0, 0, 0, .45);
+    cursor: pointer;
+}
+
+.image-upload {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 36px;
+    color: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    outline: none;
+    background-color: #0073eb;
+    cursor: pointer;
+}
+
+.image-upload span {
+    color: white;
+    padding: 8px;
+}
+
+.ai-result {
+    width: 100%;
+    height: 100%;
+}
+
+.ai-result-panels {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.demo-json-req {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.demo-json-line {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.demo-json-text {
+    margin-bottom: 8px;
+    font-weight: lighter;
+}
+
+.demo-json-content {
+    white-space: pre-wrap;
+    font-size: 14px;
+    color: #404040;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.hljs-attr {
+    color: #a11;
+}
+
+.hljs-string {
+    color: #2a9292
+}

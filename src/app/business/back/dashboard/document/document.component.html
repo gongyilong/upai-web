@@ -1,0 +1,12 @@
+<div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box">
+            <nz-card class="info">
+                <h2>接口文档</h2>
+                <nz-tabset [nzTabPosition]="'left'" [nzType]="'line'">
+                    <nz-tab *ngFor="let tab of tabs" [nzTitle]="'API ' + tab"> Content of api {{ tab }} </nz-tab>
+                </nz-tabset>
+            </nz-card>
+        </div>
+    </div>
+</div>

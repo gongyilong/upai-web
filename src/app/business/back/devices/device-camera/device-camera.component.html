@@ -1,0 +1,57 @@
+<div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box">
+            <nz-card class="info">
+                <div nz-row>
+                    <div nz-col [nzXs]="{ span: 4, offset: 1 }" [nzLg]="{ span: 4, offset: 1 }">
+                        <span>设备id：</span>
+                        <input class="device-id" nz-input placeholder="sxt20210317xx" />
+                    </div>
+                    <div nz-col [nzXs]="{ span: 6, offset: 1 }" [nzLg]="{ span: 6, offset: 1 }">
+                        <span>权属单位：</span>
+                        <input class="device-own" nz-input placeholder="珠海市规划设计研究院" />
+                    </div>
+                    <div nz-col [nzXs]="{ span: 4, offset: 1 }" [nzLg]="{ span: 4, offset: 2 }">
+                        <span>日期：</span>
+                        <nz-date-picker></nz-date-picker>
+                    </div>
+                    <div nz-col [nzXs]="{ span: 4, offset: 1 }" [nzLg]="{ span: 4, offset: 2 }">
+                        <button nz-button nzType="default">重置</button>&nbsp;
+                        <button nz-button nzType="primary">查询</button>
+                    </div>
+                </div>
+            </nz-card>
+        </div>
+    </div>
+
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box">
+            <nz-card class="info">
+                <nz-table #sortTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let column of listOfColumn">{{ column.title }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td>{{ data.device_id }}</td>
+                            <td>{{ data.device_name }}</td>
+                            <td>{{ data.algorithm_id }}</td>
+                            <td>{{ data.algorithm_name }}</td>
+                            <td>{{ data.ip_address }}</td>
+                            <td>{{ data.port }}</td>
+                            <td>{{ data.device_statu }}</td>
+                            <td>{{ data.end_time }}</td>
+                            <td>
+                                <a nzTooltipTitle="视频监控" nzTooltipPlacement="top" nz-tooltip><i nz-icon nzType="video-camera" nzTheme="outline"></i></a>
+                                <nz-divider nzType="vertical"></nz-divider>
+                                <a>修改</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </nz-card>
+        </div>
+    </div>
+</div>

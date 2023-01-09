@@ -1,0 +1,32 @@
+<div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box">
+            <nz-card class="info">
+                <nz-list nzItemLayout="vertical">
+                    <nz-list-item *ngFor="let item of data">
+                        <nz-list-item-meta>
+                            <nz-list-item-meta-avatar [nzSrc]="item.avatar"> </nz-list-item-meta-avatar>
+                            <nz-list-item-meta-title>
+                                <a href="{{ item.href }}">{{ item.title }}</a>
+                            </nz-list-item-meta-title>
+                            <nz-list-item-meta-description>
+                                {{ item.description }}
+                            </nz-list-item-meta-description>
+                        </nz-list-item-meta>
+                        <p>github地址:&nbsp;&nbsp;<a>{{ item.github_link }}</a></p>
+                        <p>下载链接:&nbsp;&nbsp;<a>{{ item.download_link }}</a></p>
+                        <p>CSDN博客:&nbsp;&nbsp;<a>{{ item.csdn_link }}</a></p>
+                        <ul nz-list-item-actions>
+                            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
+                            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</nz-list-item-action>
+                            <nz-list-item-action><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 2</nz-list-item-action>
+                        </ul>
+                        <nz-list-item-extra>
+                            <img width="272" alt="logo" src={{item.avatar}} />
+                        </nz-list-item-extra>
+                    </nz-list-item>
+                </nz-list>
+            </nz-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.setting-input {
+    width: 60%;
+}
+
+.select-input {
+    width: 40%;
+}
+
+.avatar img {
+    width: 25%;
+    height: auto;
+}
+
+.description {
+    color: gray;
+}
