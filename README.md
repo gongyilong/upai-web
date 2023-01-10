@@ -25,6 +25,7 @@ npm: 9.2.0
 
 ## 运行命令
 npm install
+
 npm run start
 
 ## 技术架构
